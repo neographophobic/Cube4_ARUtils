@@ -16,6 +16,12 @@
 // Include for Cube Library
 #include "Cube.h"
 
+struct coordinate {
+  byte x;
+  byte y;
+  byte z;
+};
+
 struct hsv {
   double h;       // angle in degrees
   double s;       // percent
