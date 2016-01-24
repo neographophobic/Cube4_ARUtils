@@ -2,3 +2,4 @@ coordinate	LITERAL1
 hsv		LITERAL1
 rgb2hsv	KEYWORD2
 hsv2rgb	KEYWORD2
+buildLEDsArray	KEYWORD2

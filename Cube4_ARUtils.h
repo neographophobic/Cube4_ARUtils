@@ -30,5 +30,6 @@ struct hsv {
 
 struct hsv rgb2hsv(rgb_t in);
 rgb_t hsv2rgb(struct hsv in);
+void buildLEDsArray(struct coordinate leds[]);
 
 #endif
