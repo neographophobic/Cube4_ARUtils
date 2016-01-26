@@ -183,3 +183,29 @@ void shuffle(int *array, size_t n)
     }
   }
 }
+
+byte getCorner(struct coordinate point)
+{
+	return getCorner(point.x, point.y, point.z);
+}
+
+byte getCorner(byte X, byte Y, byte Z)
+{
+  if (X == 0 && Y == 0 && Z == 0) {
+    return 1;
+  } else if (X == 0 && Y == 3 && Z == 0) {
+    return 2;
+  } else if (X == 3 && Y == 3 && Z == 0) {
+    return 3;
+  } else if (X == 3 && Y == 0 && Z == 0) {
+    return 4;
+  } else if (X == 0 && Y == 0 && Z == 3) {
+    return 5;
+  } else if (X == 0 && Y == 3 && Z == 3) {
+    return 6;
+  } else if (X == 3 && Y == 3 && Z == 3) {
+    return 7;
+  } else if (X == 3 && Y == 0 && Z == 3) {
+    return 8;
+  }
+}

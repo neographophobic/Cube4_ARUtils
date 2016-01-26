@@ -4,3 +4,4 @@ rgb2hsv	KEYWORD2
 hsv2rgb	KEYWORD2
 buildLEDsArray	KEYWORD2
 shuffle	KEYWORD2
+getCorner	KEYWORD2

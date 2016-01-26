@@ -35,4 +35,7 @@ rgb_t hsv2rgb(struct hsv in);
 void buildLEDsArray(struct coordinate leds[]);
 void shuffle(int *array, size_t n);
 
+byte getCorner(byte X, byte Y, byte Z);
+byte getCorner(struct coordinate point);
+
 #endif
