@@ -16,6 +16,8 @@
 // Include for Cube Library
 #include "Cube.h"
 
+#define UNUSED_ANALOG_PIN 0
+
 struct coordinate {
   byte x;
   byte y;
