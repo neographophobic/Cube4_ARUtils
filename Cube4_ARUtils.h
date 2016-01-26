@@ -37,5 +37,6 @@ void shuffle(int *array, size_t n);
 
 byte getCorner(byte X, byte Y, byte Z);
 byte getCorner(struct coordinate point);
+void drawLine(Cube cube, struct coordinate start, struct coordinate end, rgb_t theColour);
 
 #endif

@@ -209,3 +209,20 @@ byte getCorner(byte X, byte Y, byte Z)
     return 8;
   }
 }
+
+void drawLine(Cube cube, struct coordinate start, struct coordinate end, rgb_t theColour)
+{
+  if (start.y > end.y && start.z < end.z ||
+      start.x > end.x && start.z == end.z ||
+      start.x > end.x && start.y == end.y ||
+      start.y > end.y && start.x == end.x
+     ) {
+    // Work around bug in line drawing code by swapping start and
+    // end point if particular condiations are meet
+    cube.line(end.x, end.y, end.z,
+              start.x, start.y, start.z, theColour);
+  } else {
+    cube.line(start.x, start.y, start.z,
+              end.x, end.y, end.z, theColour);
+  }
+}
