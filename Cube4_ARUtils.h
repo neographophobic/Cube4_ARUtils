@@ -16,7 +16,11 @@
 // Include for Cube Library
 #include "Cube.h"
 
-#define UNUSED_ANALOG_PIN 0
+// A unused analog pin that is used to seed the random number generator
+const byte UNUSED_ANALOG_PIN = 0;
+
+// The total number of LEDs + 1, used for various functions
+const byte TOTAL_LEDS = 65;
 
 struct coordinate {
   byte x;
