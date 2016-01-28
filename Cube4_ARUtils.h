@@ -1,9 +1,9 @@
 /*
- *  File:		Cube4_ARUtils.h
- *  Purpose:	Header file for helper functions for Freetronics 4x4x4 RGB LED Cube
- *  Author:		Adam Reed (adam@secretcode.ninja)
- *  Licence:	BSD 3-Clause Licence
- */
+    File:		Cube4_ARUtils.h
+    Purpose:	Header file for helper functions for Freetronics 4x4x4 RGB LED Cube
+    Author:		Adam Reed (adam@secretcode.ninja)
+    Licence:	BSD 3-Clause Licence
+*/
 
 // Ensure that this header file is only processed once, regardless of how
 // many time it is included

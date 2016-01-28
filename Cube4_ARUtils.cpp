@@ -1,9 +1,9 @@
 /*
- *  File:		Cube4_ARUtils.cpp
- *  Purpose:	Helper functions for Freetronics 4x4x4 RGB LED Cube
- *  Author:		Adam Reed (adam@secretcode.ninja)
- *  Licence:	BSD 3-Clause Licence
- */
+    File:		Cube4_ARUtils.cpp
+    Purpose:	Helper functions for Freetronics 4x4x4 RGB LED Cube
+    Author:		Adam Reed (adam@secretcode.ninja)
+    Licence:	BSD 3-Clause Licence
+*/
 
 // Include for Arduino Library
 #include "Arduino.h"
@@ -117,11 +117,11 @@ rgb_t hsv2rgb(struct hsv in)
 }
 
 /*
- * buildLEDsArray builds an array that holds the location of each LED.
- * It starts at 0,0,0 and works it's way right (X axis), then
- * snaps to the left and starts again. Once the entire bottom plane is
- * done it moves up to the next one and starts again.
- */
+   buildLEDsArray builds an array that holds the location of each LED.
+   It starts at 0,0,0 and works it's way right (X axis), then
+   snaps to the left and starts again. Once the entire bottom plane is
+   done it moves up to the next one and starts again.
+*/
 void buildLEDsArray(struct coordinate leds[]) {
   // Start at 0,0,0
   byte X = 0;
@@ -186,7 +186,7 @@ void shuffle(int *array, size_t n)
 
 byte getCorner(struct coordinate point)
 {
-	return getCorner(point.x, point.y, point.z);
+  return getCorner(point.x, point.y, point.z);
 }
 
 byte getCorner(byte X, byte Y, byte Z)
