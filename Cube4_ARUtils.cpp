@@ -14,6 +14,11 @@
 // Include the header file for these functions
 #include "Cube4_ARUtils.h"
 
+/*
+    rgb2hsv Converts a RGB colour into a HSV representation
+
+    Original code from: http://stackoverflow.com/a/6930407
+*/
 struct hsv rgb2hsv(rgb_t in)
 {
   struct hsv         out;
@@ -57,7 +62,11 @@ struct hsv rgb2hsv(rgb_t in)
   return out;
 }
 
+/*
+    hsv2rgb Converts a HSV colour representation into RGB
 
+    Original code: from http://stackoverflow.com/a/6930407
+*/
 rgb_t hsv2rgb(struct hsv in)
 {
   double      hh, p, q, t, ff;
@@ -117,10 +126,10 @@ rgb_t hsv2rgb(struct hsv in)
 }
 
 /*
-   buildLEDsArray builds an array that holds the location of each LED.
-   It starts at 0,0,0 and works it's way right (X axis), then
-   snaps to the left and starts again. Once the entire bottom plane is
-   done it moves up to the next one and starts again.
+    buildLEDsArray builds an array that holds the location of each LED.
+    It starts at 0,0,0 and works it's way right (X axis), then
+    snaps to the left and starts again. Once the entire bottom plane is
+    done it moves up to the next one and starts again.
 */
 void buildLEDsArray(struct coordinate leds[]) {
   // Start at 0,0,0
@@ -168,7 +177,6 @@ void buildLEDsArray(struct coordinate leds[]) {
     number generator.
 
     Code from: http://benpfaff.org/writings/clc/shuffle.html
-
 */
 void shuffle(int *array, size_t n)
 {
@@ -184,6 +192,10 @@ void shuffle(int *array, size_t n)
   }
 }
 
+/*
+    getCorner will take the coordinates of a LED and,
+    return which corner of the 4x4x4 Cube it is
+*/
 byte getCorner(struct coordinate point)
 {
   return getCorner(point.x, point.y, point.z);
@@ -210,6 +222,11 @@ byte getCorner(byte X, byte Y, byte Z)
   }
 }
 
+/*
+    drawLine is a wrapper around the cube's line function that works around
+    an issue where the line will occasionally not display depending on the
+    order of the coordinates provided.
+*/
 void drawLine(Cube cube, struct coordinate start, struct coordinate end, rgb_t theColour)
 {
   if (start.y > end.y && start.z < end.z ||
